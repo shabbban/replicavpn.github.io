@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Replica VPN — быстрый и приватный VPN." />
+    <title>Replica VPN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="profile" aria-labelledby="site-title">
+        <!-- После загрузки логотипа замените путь ниже на имя вашего файла. -->
+        <div class="logo-frame">
+          <img src="images/logo.png" alt="Логотип Replica VPN" class="logo" />
+          <span class="logo-fallback" aria-hidden="true">R</span>
+        </div>
+        <div>
+          <p class="eyebrow">Безопасное подключение</p>
+          <h1 id="site-title">Replica VPN</h1>
+          <p class="intro">Свобода и приватность в сети — в одном касании.</p>
+        </div>
+      </section>
+
+      <section class="link-section" aria-labelledby="telegram-title">
+        <div class="section-heading">
+          <span class="heading-icon telegram-icon" aria-hidden="true">✈</span>
+          <h2 id="telegram-title">Telegram</h2>
+        </div>
+
+        <div class="telegram-grid">
+          <a class="card telegram-card bot-card" href="https://t.me/replicavpn_bot" target="_blank" rel="noopener noreferrer">
+            <span class="card-icon">🤖</span>
+            <span class="badge">НАЧАТЬ</span>
+            <strong>Бот Replica VPN</strong>
+            <small>Подключиться к VPN</small>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="card telegram-card channel-card" href="https://t.me/replicavpn_news" target="_blank" rel="noopener noreferrer">
+            <span class="card-icon">◉</span>
+            <span class="badge">НОВОСТИ</span>
+            <strong>Новостной канал</strong>
+            <small>Обновления и полезное</small>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="card telegram-card support-card" href="https://t.me/replicavpn_help" target="_blank" rel="noopener noreferrer">
+            <span class="card-icon">?</span>
+            <span class="badge">ПОМОЩЬ</span>
+            <strong>Поддержка</strong>
+            <small>Ответим на вопросы</small>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="social-grid" aria-label="Социальные сети">
+        <a class="card social-card instagram" href="https://www.instagram.com/replica.vpn" target="_blank" rel="noopener noreferrer">
+          <span class="social-top"><span class="heading-icon">◎</span><span class="handle">Instagram</span></span>
+          <strong>Instagram</strong>
+          <small>Новости и жизнь Replica VPN</small>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+        <span class="card social-card youtube is-disabled" aria-label="YouTube: скоро появится">
+          <span class="social-top"><span class="heading-icon">▶</span><span class="handle">YouTube</span></span>
+          <strong>YouTube</strong>
+          <small>Гайды и полезные видео</small>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </span>
+        <span class="card social-card tiktok is-disabled" aria-label="TikTok: скоро появится">
+          <span class="social-top"><span class="heading-icon">♪</span><span class="handle">TikTok</span></span>
+          <strong>TikTok</strong>
+          <small>Коротко о цифровой свободе</small>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </span>
+      </section>
+
+      <footer>© <span id="year"></span> Replica VPN</footer>
+    </main>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      document.querySelector('.logo').addEventListener('error', function () {
+        this.style.display = 'none';
+        this.nextElementSibling.style.display = 'grid';
+      });
+    </script>
+  </body>
+</html>
